@@ -12,4 +12,4 @@ def post_new_client(kit_body, auth_token):
     current_header["Authorization"] = "Bearer " + auth_token
     return requests.post(configuration.URL_SERVICE + configuration.KITS_PATH,
                          json = kit_body,
-                         headers = data.headers)
+                         headers = current_header)
